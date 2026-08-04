@@ -100,13 +100,13 @@ const DIFERENCIAIS = [
 ];
 
 const PAGAMENTOS = [
-  { icon: CreditCard, label: "Visa", note: "Crédito" },
-  { icon: CreditCard, label: "Mastercard", note: "Crédito" },
-  { icon: CreditCard, label: "Elo", note: "Crédito" },
-  { icon: CreditCard, label: "Hipercard", note: "Crédito" },
-  { icon: Banknote, label: "Débito", note: "À vista" },
-  { icon: Smartphone, label: "PIX", note: "Na hora" },
-  { icon: Star, label: "Parcelamos", note: "Consulte as condições" },
+  { mark: VisaMark, label: "Visa", note: "Crédito" },
+  { mark: MastercardMark, label: "Mastercard", note: "Crédito" },
+  { mark: EloMark, label: "Elo", note: "Crédito" },
+  { mark: HipercardMark, label: "Hipercard", note: "Crédito" },
+  { mark: DebitoMark, label: "Débito", note: "À vista" },
+  { mark: PixMark, label: "PIX", note: "Na hora" },
+  { mark: ParcelasMark, label: "Parcelamos", note: "Consulte as condições" },
 ];
 
 const BANNER_TAGS = [
@@ -120,13 +120,14 @@ const BANNER_TAGS = [
 
 const GALERIA = [
   { img: gMadeiras, label: "Madeiras" },
-  { img: gTijolos, label: "Tijolos e Cimento" },
+  { img: gTijolos, label: "Tijolos" },
+  { img: gCimento, label: "Cimento" },
   { img: gTintas, label: "Tintas e Ferragens" },
-  { img: banner, label: "Telhas, Portas e Janelas" },
-  { img: gMadeiras, label: "Madeira em geral" },
-  { img: gTijolos, label: "Caixa d'água e Tubulações" },
-  { img: gTintas, label: "Ferramentas e Carrinhos" },
+  { img: gTelhas, label: "Telhas, Portas e Janelas" },
+  { img: gCaixaAgua, label: "Caixa d'água e Tubulações" },
+  { img: gFerramentas, label: "Ferramentas e Carrinhos de mão" },
 ];
+
 
 const NAV = [
   { href: "#produtos", label: "Produtos" },
@@ -466,13 +467,14 @@ function Pagamentos() {
             <Reveal key={p.label} delay={i * 60}>
               <div className="card-3d glass relative h-full overflow-hidden rounded-2xl p-5">
                 <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-primary/20 blur-2xl" />
-                <p.icon className="h-8 w-8 text-primary" />
-                <p className="mt-4 font-display text-lg font-extrabold">{p.label}</p>
+                <p.mark />
+                <p className="mt-4 font-display text-base font-extrabold">{p.label}</p>
                 <p className="text-xs text-muted-foreground">{p.note}</p>
               </div>
             </Reveal>
           ))}
         </div>
+
       </div>
     </section>
   );
