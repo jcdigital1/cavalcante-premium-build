@@ -714,7 +714,7 @@ function BackToTop({ visible }: { visible: boolean }) {
       }`}
     >
       <ChevronUp className="h-6 w-6" />
-      <ArrowUp className="hidden" />
+      
     </button>
   );
 }
