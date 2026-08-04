@@ -1,14 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
-  ArrowUp,
   BadgeCheck,
-  Banknote,
   Blocks,
   Boxes,
   Brush,
   ChevronUp,
-  CreditCard,
   DoorOpen,
   Droplets,
   Hammer,
@@ -16,7 +13,6 @@ import {
   Home,
   Instagram,
   Layers,
-  Lightbulb,
   MapPin,
   MessageCircle,
   Mountain,
@@ -26,9 +22,7 @@ import {
   Ruler,
   ShieldCheck,
   ShoppingCart,
-  Smartphone,
   Sparkles,
-  Star,
   Tag,
   Toilet,
   Trees,
@@ -42,9 +36,23 @@ import banner from "@/assets/banner-materiais.jpg";
 import gMadeiras from "@/assets/g-madeiras.jpg";
 import gTijolos from "@/assets/g-tijolos.jpg";
 import gTintas from "@/assets/g-tintas.jpg";
+import gCimento from "@/assets/g-cimento.jpg";
+import gTelhas from "@/assets/g-telhas.jpg";
+import gCaixaAgua from "@/assets/g-caixa-agua.jpg";
+import gFerramentas from "@/assets/g-ferramentas.jpg";
 import { Reveal } from "@/components/site/Reveal";
 import { SiteBackground } from "@/components/site/SiteBackground";
+import {
+  DebitoMark,
+  EloMark,
+  HipercardMark,
+  MastercardMark,
+  ParcelasMark,
+  PixMark,
+  VisaMark,
+} from "@/components/site/PaymentMarks";
 import { ADDRESS, INSTAGRAM_URL, WHATSAPP_URL } from "@/components/site/links";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
